@@ -5,6 +5,8 @@ api:
     - rabbitmq
   volumes_from:
     - data
+  ports:
+    - '9101:9101'
 
 auth:
   image: stackstorm/st2auth
@@ -12,9 +14,11 @@ auth:
     - api
     - mongo
   volumes:
-    - ./auth/htpasswd:/etc/st2/htpasswd:ro
+    - './auth/htpasswd:/etc/st2/htpasswd:ro'
   volumes_from:
     - data
+  ports:
+    - '9100:9100'
 
 notifier:
   image: stackstorm/st2notifier
@@ -94,6 +98,8 @@ chatops:
 ## External Services
 mongo:
   image: mongo
+  ports:
+    - '27017:27017'
 
 rabbitmq:
   image: rabbitmq

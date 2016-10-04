@@ -1,0 +1,11 @@
+argcomplete==1.4.1
+decorator==4.0.10
+jsonpath-rw==1.4.0
+ply==3.9
+prettytable==0.7.2
+python-dateutil==2.5.3
+pytz==2016.6.1
+PyYAML==3.12
+requests==2.11.1
+six==1.9.0
+st2client==2.0.0
